@@ -1,0 +1,123 @@
+body {
+    background-image: url(../images/bg-repeat.jpg);    
+    background-size: contain;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 100vh;
+}
+
+.half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 300px;
+    height: 111px;
+}
+
+.content h1 {
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 20px;
+    padding-bottom: 11px;
+}
+
+.content p {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 340px;
+    height: 378px;
+}
+
+.formulario .dados {
+    width: 298px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding-left: 3%;
+}
+
+.formulario .notFilled,
+.formulario .message.notFilled {
+    border-color: #f52e2e;
+}
+
+.formulario .filled,
+.formulario .message.filled {
+    border-color: #00c22b;
+}
+
+.formulario .campoNotFilled {
+    color: #f52e2e;
+    font-size: 8px;
+    padding-right: 220px;
+    margin-top: -15px;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.formulario .campoNotFilledTextArea {
+    color: #f52e2e;
+    font-size: 8px;
+    padding-right: 220px;
+    display: none;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #a8a8a8;
+    font-weight: 700;
+}
+
+.formulario .message {
+    width: 298px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid;
+    font-weight: 400;
+    font-size: 15px;
+    padding-left: 3%;
+    resize: none;
+}
+
+.formulario .message::placeholder {
+    position: absolute;
+    top: 9%;
+}
+
+.formulario .campoObrigatorio {
+    font-size: 15px;
+    padding: 5px 140px 5px 0;
+}
+
+.formulario .button {
+    width: 298px;
+    height: 41px;
+    background-color: #3CCC87;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 8px;
+    border: solid white;
+    cursor: pointer;
+}
+
