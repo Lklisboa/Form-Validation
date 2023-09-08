@@ -1,25 +1,19 @@
-function botaoEnviar() {
-    const trocarCor = document.querySelectorAll(".dados, .message");
-    let todosCamposValidos = true;
+const trocarCor = document.querySelectorAll(".dados, .message");
+const botaoEnviar = document.querySelector(".button")
 
-    trocarCor.forEach(dados => {
-        if (dados.value.trim() === "" ) {
-            dados.classList.remove("filled");
-            dados.classList.add("notFilled");
-            const errorMessage = dados.nextElementSibling;
-            errorMessage.style.display = "block";
-
-            todosCamposValidos = false;
-        } else {
+botaoEnviar.addEventListener("click", (e) => {
+    e.preventDefault()
+    
+        trocarCor.forEach(dados => {
+        if (dados.value) {
             dados.classList.remove("notFilled");
-            dados.classList.add("filled")
+            dados.classList.add("filled");
+            dados.nextElementSibling.style.display = "none";
 
-            const errorMessage = dados.nextElementSibling;
-            errorMessage.style.display = "none";
+        } else {
+            dados.classList.remove("filled");
+            dados.classList.add("notFilled")
+            dados.nextElementSibling.style.display = "block";
         }
     });
- 
-    if (todosCamposValidos) {
-        document.getElementById("formulario").submit(); 
-    }
-}
+})
