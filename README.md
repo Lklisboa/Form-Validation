@@ -1,6 +1,6 @@
 # Project - Form Validation
 
-First project using HTML, CSS and Javascript. Using those 3 languages was able to transform one static web page in one more interactive.
+First project using HTML, CSS and Javascript. Using the 3 languages was able to transform one static web page in one more interactive.
 
 <img src="./src/images/form-gif.gif" alt ="form with validation gif">
 
